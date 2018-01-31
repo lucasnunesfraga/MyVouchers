@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "349251206242",
+    "firebase_url": "https://myvouchers-b925e.firebaseio.com",
+    "project_id": "myvouchers-b925e",
+    "storage_bucket": "myvouchers-b925e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349251206242:android:3153737395696af0",
+        "android_client_info": {
+          "package_name": "com.example.lucasnfraga.myvouchers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349251206242-5l4ojdb89v0554ffiue5tn6avhskincc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lucasnfraga.myvouchers",
+            "certificate_hash": "fdf70e87efde6aa355953ca739453f7c420bd0d5"
+          }
+        },
+        {
+          "client_id": "349251206242-d9kta9p9h15fds6aj0r4qht3hfnavq33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdZLfXl53X8Q7-i_ATchcInUHfRliwLB8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349251206242-d9kta9p9h15fds6aj0r4qht3hfnavq33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
