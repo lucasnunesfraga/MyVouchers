@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.FormUserActivity" />
-        <activity android:name=".activity.VoucherActivity"></activity>
+        <activity android:name=".activity.VoucherActivity" />
+        <activity android:name=".activity.FormEmpresaActivity"></activity>
     </application>
 
 </manifest>

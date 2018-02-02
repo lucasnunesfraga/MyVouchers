@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         btNovoUsuario = (Button) findViewById(R.id.bt_novo_usuario_id);
+        btNovaEmpresa = (Button) findViewById(R.id.bt_nova_empresa_id);
+        //btLogin       = (Button) findViewById(R.id.bt_login_id);
 
         btNovoUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,5 +30,19 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent(MainActivity.this, FormUserActivity.class ));
             }
         });
+
+        btNovaEmpresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FormEmpresaActivity.class ));
+            }
+        });
+
+        /*btLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FormLoginActivity.class ));
+            }
+        });*/
     }
 }

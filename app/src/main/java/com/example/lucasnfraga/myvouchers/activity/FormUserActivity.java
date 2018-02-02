@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.lucasnfraga.myvouchers.R;
 import com.example.lucasnfraga.myvouchers.config.ConfiguracaoFirebase;
+import com.example.lucasnfraga.myvouchers.model.Empresa;
 import com.example.lucasnfraga.myvouchers.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -52,12 +53,16 @@ public class FormUserActivity extends AppCompatActivity {
                 usuario.setCpf(cpf.getText().toString());
                 usuario.setEmail(email.getText().toString());
                 usuario.setSenha(senha.getText().toString());
-                cadastrarUsuario();
+
+                //empresa
+                Intent i = getIntent();
+                Empresa empresa = (Empresa)i.getSerializableExtra("empresa");
+                cadastrarUsuario(empresa);
             }
         });
     }
 
-    private void cadastrarUsuario(){
+    private void cadastrarUsuario(final Empresa empresa){
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(),
@@ -72,8 +77,17 @@ public class FormUserActivity extends AppCompatActivity {
                     usuario.setId(task.getResult().getUser().getUid());
                     usuario.salvar();
 
-                    Intent vouchers = new Intent(FormUserActivity.this, VoucherActivity.class);
-                    startActivity(vouchers);
+                    if(empresa != null){
+                        empresa.setUsuario(usuario);
+                        cadastrarEmpresa(empresa);
+
+                        Intent vouchers = new Intent(FormUserActivity.this, VoucherActivity.class);
+                        startActivity(vouchers);
+                    }else
+                    {
+                        Intent vouchers = new Intent(FormUserActivity.this, VoucherActivity.class);
+                        startActivity(vouchers);
+                    }
                 }else{
 
                     String erroExcecao = "";
@@ -94,5 +108,10 @@ public class FormUserActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void cadastrarEmpresa(Empresa empresa){
+            //todo validacçoes
+            empresa.salvar();
     }
 }
