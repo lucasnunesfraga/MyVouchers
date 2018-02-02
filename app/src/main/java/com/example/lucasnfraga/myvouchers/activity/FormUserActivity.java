@@ -81,8 +81,8 @@ public class FormUserActivity extends AppCompatActivity {
                         empresa.setUsuario(usuario);
                         cadastrarEmpresa(empresa);
 
-                        Intent vouchers = new Intent(FormUserActivity.this, VoucherActivity.class);
-                        startActivity(vouchers);
+                        Intent homeEmpresa = new Intent(FormUserActivity.this, HomeEmpresaActivity.class);
+                        startActivity(homeEmpresa);
                     }else
                     {
                         Intent vouchers = new Intent(FormUserActivity.this, VoucherActivity.class);

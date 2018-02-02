@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".activity.FormUserActivity" />
         <activity android:name=".activity.VoucherActivity" />
-        <activity android:name=".activity.FormEmpresaActivity"></activity>
+        <activity android:name=".activity.FormEmpresaActivity" />
+        <activity android:name=".activity.HomeEmpresaActivity" />
+        <activity android:name=".activity.FormVoucherActivity"></activity>
     </application>
 
 </manifest>
