@@ -19,7 +19,8 @@
         <activity android:name=".activity.VoucherActivity" />
         <activity android:name=".activity.FormEmpresaActivity" />
         <activity android:name=".activity.HomeEmpresaActivity" />
-        <activity android:name=".activity.FormVoucherActivity"></activity>
+        <activity android:name=".activity.FormVoucherActivity" />
+        <activity android:name=".activity.CriarContaActivity"></activity>
     </application>
 
 </manifest>
